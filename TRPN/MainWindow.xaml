@@ -7,17 +7,28 @@
     </Window.Resources>
     <Window.InputBindings>
         <KeyBinding Command="{Binding NumberCommand}" CommandParameter="0" Key="NumPad0" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="0" Key="D0" />
         <KeyBinding Command="{Binding NumberCommand}" CommandParameter="1" Key="NumPad1" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="1" Key="D1" />
         <KeyBinding Command="{Binding NumberCommand}" CommandParameter="2" Key="NumPad2" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="2" Key="D2" />
         <KeyBinding Command="{Binding NumberCommand}" CommandParameter="3" Key="NumPad3" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="3" Key="D3" />
         <KeyBinding Command="{Binding NumberCommand}" CommandParameter="4" Key="NumPad4" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="4" Key="D4" />
         <KeyBinding Command="{Binding NumberCommand}" CommandParameter="5" Key="NumPad5" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="5" Key="D5" />
         <KeyBinding Command="{Binding NumberCommand}" CommandParameter="6" Key="NumPad6" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="6" Key="D6" />
         <KeyBinding Command="{Binding NumberCommand}" CommandParameter="7" Key="NumPad7" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="7" Key="D7" />
         <KeyBinding Command="{Binding NumberCommand}" CommandParameter="8" Key="NumPad8" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="8" Key="D8" />
         <KeyBinding Command="{Binding NumberCommand}" CommandParameter="9" Key="NumPad9" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="9" Key="D9" />
         <KeyBinding Command="{Binding EnterCommand}" Key="Enter" />
         <KeyBinding Command="{Binding NumberCommand}" CommandParameter="."  Key="Decimal" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="."  Key="OemPeriod" />
         <KeyBinding Command="{Binding ClearCommand}" Key="Back" />
         <KeyBinding Command="{Binding MathsCommand}" CommandParameter="plus" Key="Add" />
         <KeyBinding Command="{Binding MathsCommand}" CommandParameter="minus" Key="Subtract" />
