@@ -1,0 +1,85 @@
+﻿<Window x:Class="TRPN.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TRPN" Height="500" Width="325">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </Window.Resources>
+    <Window.InputBindings>
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="0" Key="NumPad0" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="1" Key="NumPad1" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="2" Key="NumPad2" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="3" Key="NumPad3" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="4" Key="NumPad4" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="5" Key="NumPad5" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="6" Key="NumPad6" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="7" Key="NumPad7" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="8" Key="NumPad8" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="9" Key="NumPad9" />
+        <KeyBinding Command="{Binding EnterCommand}" Key="Enter" />
+        <KeyBinding Command="{Binding NumberCommand}" CommandParameter="."  Key="Decimal" />
+        <KeyBinding Command="{Binding ClearCommand}" Key="Back" />
+        <KeyBinding Command="{Binding MathsCommand}" CommandParameter="plus" Key="Add" />
+        <KeyBinding Command="{Binding MathsCommand}" CommandParameter="minus" Key="Subtract" />
+        <KeyBinding Command="{Binding MathsCommand}" CommandParameter="times" Key="Multiply" />
+        <KeyBinding Command="{Binding MathsCommand}" CommandParameter="divide" Key="Divide" />
+    </Window.InputBindings>
+
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Top" Margin="10">
+            <!--<ScrollViewer Margin="10"  BorderThickness="2,2,0,0" BorderBrush="Gray" VerticalScrollBarVisibility="Visible" >-->
+            <Canvas DockPanel.Dock="Right" Background="GhostWhite" Width="20" Visibility="{Binding Path=DisplayToBig, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <Line X1="10" Y1="10" X2="10" Y2="30" Stroke="Black" StrokeThickness="2" />
+                <Line X1="10" Y1="10" X2="15" Y2="15" Stroke="Black" StrokeThickness="2" />
+                <Line X1="10" Y1="10" X2="5" Y2="15" Stroke="Black" StrokeThickness="2" />
+            </Canvas>
+            <TextBlock Height="100" Text="{Binding StackDisplay}" Background="GhostWhite" />
+            <!--</ScrollViewer>-->
+        </DockPanel>
+
+        <StackPanel DockPanel.Dock="Bottom">
+            <Button Content="ENTER" Command="{Binding EnterCommand}" Padding="10" Margin="5" />
+        </StackPanel>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Margin" Value="5" />
+                </Style>
+            </Grid.Resources>
+            <Button Grid.Column="0" Grid.Row="3" Content="0" Command="{Binding NumberCommand}" CommandParameter="0" />
+            <Button Grid.Column="0" Grid.Row="2" Content="1" Command="{Binding NumberCommand}" CommandParameter="1" />
+            <Button Grid.Column="1" Grid.Row="2" Content="2" Command="{Binding NumberCommand}" CommandParameter="2" />
+            <Button Grid.Column="2" Grid.Row="2" Content="3" Command="{Binding NumberCommand}" CommandParameter="3" />
+            <Button Grid.Column="0" Grid.Row="1" Content="4" Command="{Binding NumberCommand}" CommandParameter="4" />
+            <Button Grid.Column="1" Grid.Row="1" Content="5" Command="{Binding NumberCommand}" CommandParameter="5" />
+            <Button Grid.Column="2" Grid.Row="1" Content="6" Command="{Binding NumberCommand}" CommandParameter="6" />
+            <Button Grid.Column="0" Grid.Row="0" Content="7" Command="{Binding NumberCommand}" CommandParameter="7" />
+            <Button Grid.Column="1" Grid.Row="0" Content="8" Command="{Binding NumberCommand}" CommandParameter="8" />
+            <Button Grid.Column="2" Grid.Row="0" Content="9" Command="{Binding NumberCommand}" CommandParameter="9" />
+            <Button Grid.Column="1" Grid.Row="3" Content="." Command="{Binding NumberCommand}" CommandParameter="." />
+            <Button Grid.Column="3" Grid.Row="3" Content="+" Command="{Binding MathsCommand}" CommandParameter="plus" />
+            <Button Grid.Column="3" Grid.Row="2" Content="-" Command="{Binding MathsCommand}" CommandParameter="minus" />
+            <Button Grid.Column="3" Grid.Row="1" Content="x" Command="{Binding MathsCommand}" CommandParameter="times" />
+            <Button Grid.Column="3" Grid.Row="0" Content="/" Command="{Binding MathsCommand}" CommandParameter="divide" />
+            <Button Grid.Column="2" Grid.Row="3" Content="C" Command="{Binding ClearCommand}" />
+            <Button Grid.Column="4" Grid.Row="2" Content="+/-" Command="{Binding PlusMinusCommand}" />
+            <Button Grid.Column="4" Grid.Row="3" Content="Swap" Command="{Binding MathsCommand}" CommandParameter="swap" />
+            <Button Grid.Column="4" Grid.Row="0" Content="Sqrt" Command="{Binding SMathsCommand}" CommandParameter="sqrt" />
+            <Button Grid.Column="4" Grid.Row="1" Content="Exp" Command="{Binding SMathsCommand}" CommandParameter="exp" />
+        </Grid>
+    </DockPanel>
+</Window>
