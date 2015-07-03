@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRPN", "TRPN\TRPN.csproj", "{23CF4193-1E29-4F81-836C-F60DF71921D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRPNTests", "TRPNTests\TRPNTests.csproj", "{81021388-02D8-4CF6-A564-B9A5BC97EEA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{23CF4193-1E29-4F81-836C-F60DF71921D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23CF4193-1E29-4F81-836C-F60DF71921D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23CF4193-1E29-4F81-836C-F60DF71921D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81021388-02D8-4CF6-A564-B9A5BC97EEA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81021388-02D8-4CF6-A564-B9A5BC97EEA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81021388-02D8-4CF6-A564-B9A5BC97EEA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81021388-02D8-4CF6-A564-B9A5BC97EEA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

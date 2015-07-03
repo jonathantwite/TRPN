@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 namespace TRPN
 {
-    class TRPNViewModel : INotifyPropertyChanged
+    public class TRPNViewModel : INotifyPropertyChanged
     {
         /// <summary>
         /// The stack
@@ -145,6 +145,10 @@ namespace TRPN
         /// <param name="num">The number as a <see cref="System.String"/></param>
         private void NumberPressed(string num)
         {
+            int number;
+            if (!int.TryParse(num, out number)) { throw new ArgumentException("NumberPressed"); }
+            if (number < 0 || number > 9) { throw new ArgumentOutOfRangeException("NumberPressed"); }
+
             if (!(num == "0" && inputLength == 0))
             {
                 input.Append(num);
